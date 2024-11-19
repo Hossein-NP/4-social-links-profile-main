@@ -30,26 +30,33 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-   <script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
     tailwind.config = {
       theme: {
         extend: {
           container: {
             center: true,
         },
-        
-      }
+        screens: {
+            'xs': '375px',       // تعریف یک breakpoint جدید
+            'sm': '640px',       // تغییر مقدار پیش‌فرض sm
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
+          },
     }
   }
+}
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex items-center justify-center  min-h-screen">
+<body class="flex md:items-center justify-center  min-h-screen">
 
   <!-- social links profle  -->
    <main class="container flex items-center justify-center">
     <!-- social box  -->
-    <div class=" w-[327px] sm:p-6 rounded-xl">
+    <div class=" w-[327px] xs:p-6 md:p-10 rounded-xl">
       <!-- user img / name / location / position  -->
        <section class="flex flex-col items-center">
         <!-- user img  -->
@@ -58,12 +65,12 @@
          </div>
          <!-- user name and location  -->
          <div class="mt-6 mb-6 text-center">
-          <span class="text-white sm:text-2xl tracking-normal">Jessica Randall</span>
+          <span class="text-white xs:text-2xl tracking-normal">Jessica Randall</span>
            <!-- user location  -->
-          <address class="tracking-normal sm:text-sm">London, United Kingdom</address>
+          <address class="tracking-normal xs:text-sm">London, United Kingdom</address>
          </div>
          <!-- user position  -->
-         <p class="mb-6 text-white sm:text-sm">"Front-end developer and avid reader."</p>
+         <p class="mb-6 text-white xs:text-sm">"Front-end developer and avid reader."</p>
        </section>
        <!-- socials links  -->
         <section>
